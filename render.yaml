@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: mbulaheni-callcenter
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: TWILIO_ACCOUNT_SID
+        value: ACddb4fb416e113026a626fca2173b738e
+      - key: TWILIO_AUTH_TOKEN
+        value: 2557458022c45c0e2ab7b8f9038a9839
+      - key: TWILIO_PHONE_NUMBER
+        value: +13613045386
+      - key: FORWARD_TO
+        value: +27737335518
+      - key: ADMIN_PASSWORD
+        value: Mbulaheni2025!
+      - key: PORT
+        value: 3000
