@@ -158,7 +158,7 @@ app.post('/voice/inbound', validateTwilio, (req, res) => {
     );
 
     // 3. Hold music (royalty-free Twilio ringtone while connecting)
-    twiml.play({ loop: 1 }, 'https://com.twilio.sounds.music.s3.amazonaws.com/ClockworkWaltz.mp3');
+    twiml.play('https://com.twilio.sounds.music.s3.amazonaws.com/ClockingWaltz.mp3');
 
     // 4. Dial to agent with 30-second timeout
     const dial = twiml.dial({
